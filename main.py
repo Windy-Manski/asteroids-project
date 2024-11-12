@@ -34,6 +34,11 @@ def main():
         
         for item in updatable:
             item.update(dt)
+
+        for asteroid in asteroids:
+            if CircleShape.collisions(player, asteroid):
+                print("Game over!")
+                return
         
         pygame.Surface.fill(screen, color=(0, 0, 0))
         
