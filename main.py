@@ -10,6 +10,7 @@ from asteroidfield import *
 def main():
     pygame.init()
     TICK = 60
+    
     clock = pygame.time.Clock()
     
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -30,6 +31,7 @@ def main():
     
     dt = 0
     
+    
     while True:
         # exit
         for event in pygame.event.get():
@@ -38,6 +40,7 @@ def main():
         
         for item in updatable:
             item.update(dt)
+            
 
         for asteroid in asteroids:
             if CircleShape.collisions(player, asteroid):
