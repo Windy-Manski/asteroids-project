@@ -51,7 +51,7 @@ def main():
             for shot in shots.sprites():
                 if CircleShape.collisions(shot, asteroid):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
         
         screen.fill((0, 0, 0))
         
